@@ -1,0 +1,68 @@
+<header id="main-header" style="z-index: 1">
+  <div class="navigate-btns">
+    <button
+      routerLink="/home"
+      routerLinkActive="active-link"
+      class="btns"
+      mat-button
+    >
+      All items
+    </button>
+    <button
+      routerLinkActive="active-link"
+      routerLink="/electronics"
+      class="btns"
+      mat-button
+    >
+      Electronics
+    </button>
+    <button
+      routerLinkActive="active-link"
+      routerLink="/women"
+      class="btns"
+      mat-button
+    >
+      Women
+    </button>
+    <button
+      routerLinkActive="active-link"
+      routerLink="/men"
+      class="btns"
+      mat-button
+    >
+      Men
+    </button>
+    <button
+      routerLinkActive="active-link"
+      routerLink="jewelery"
+      class="btns"
+      mat-button
+    >
+      Jewelery
+    </button>
+    <label for="prod" style="margin-left: 10px">Sort By</label>
+    <select
+      id="prod"
+      [value]="state.default"
+      style="margin-left: 5px; cursor: pointer; border-radius: 3px"
+      (change)="detectchange($event)"
+    >
+      <option [value]="state.default">Default</option>
+      <option [value]="state.rating">most rated</option>
+      <option [value]="state.price">price</option>
+    </select>
+  </div>
+  <div class="display-cart">
+    <button mat-button (click)="displaycart()">
+      <mat-icon
+        matBadgeColor="warn"
+        [matBadge]="cart.itemsincart"
+        matBadgePosition="before"
+        >shopping_cart</mat-icon
+      >
+    </button>
+  </div>
+  <app-cart *ngIf="isVisible"></app-cart>
+</header>
+
+<router-outlet class="router-outlet"></router-outlet>

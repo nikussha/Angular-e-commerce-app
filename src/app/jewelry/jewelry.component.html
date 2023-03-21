@@ -1,0 +1,9 @@
+<section class="jewelery-section">
+  <div class="wrapper">
+    <ng-container *ngIf="jewelery$ | async as data">
+      <div class="single-item" *ngFor="let each of data">
+        <app-product [product]="each"></app-product>
+      </div>
+    </ng-container>
+  </div>
+</section>

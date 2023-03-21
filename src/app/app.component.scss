@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto+Mono:wght@200&family=Roboto+Slab:wght@300&family=Rubik:wght@500&family=Space+Mono&display=swap');
+@import './/media-query.scss';
+header{
+    width: 100vw;
+    height: 15vh;
+    background-color: rgb(101, 116, 156);
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    justify-content: space-between;
+    color: white;
+
+ .navigate-btns{
+    margin-left: 5%;
+   button{
+    letter-spacing: 2px;
+   }
+ }
+    div{
+        margin-top: 30px;
+    
+    }
+    .display-cart{
+        position: absolute;
+        left: 68%;
+    }
+    .active-link{
+        background-color: rgb(74, 80, 112);
+    }
+    select{
+      padding:1px 5px;
+       color: rgba(2, 4, 9, 0.541);
+    }
+}
+
+
+@media only screen and (max-width: 1060px) {
+    header {
+        width: 22vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+       
+        .navigate-btns{
+            margin: 20px auto;
+            height: 80%;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            button{
+                width: 100%!important;
+                
+            }
+        }
+      .display-cart{
+        left: 80%;
+      }
+    }
+    
+::ng-deep app-cart {
+    margin-left: 80px!important;
+    width: 50vw;
+    height: 300px;
+    .cart{
+        width: 100%!important;
+        height: 300px!important;
+        border: 2px solid black;
+    }
+}
+}
+
+
+
+@media only screen and (max-width:1060px){
+    ::ng-deep app-home{
+        display: block;
+         margin-left: 18vw;
+         width: 80vw;
+         min-height: 100vh;
+         .home-page{
+            margin-top: 10px!important;
+            width: 100%!important;
+            .products{
+                width: 100%!important;
+                app-product{
+                    width: auto!important;
+                }
+                }
+            }
+          
+         }
+        ::ng-deep app-electronics{
+                display: block;
+                margin-left: 18vw;
+                width: 80vw;
+                min-height: 100vh;
+                .electronics-section{
+                    margin-top: 10px !important;
+                    width: 100% !important;
+                    .wrapper{
+                        margin-top: 10px !important;
+                        width: 100% !important;
+                        app-product{
+                            margin: 0 auto!important;
+                        }
+                    }
+                }
+         }
+         ::ng-deep app-womensection {
+            display: block;
+                margin-left: 18vw;
+                width: 80vw;
+                min-height: 100vh;
+                .women-section{
+                    margin-top: 10px !important;
+                        width: 100% !important;
+                        .wrapper{
+                            margin-top: 10px !important;
+                                width: 100% !important;
+                                align-items: center!important;
+                             .single-item{
+                                margin-top: 10px!important;
+                                    width: 100% !important;
+                                
+                                 app-product{
+                            margin: 0px auto!important;
+                            .product-div{
+                                margin: 0 auto!important;
+                            }
+                                 }
+                        }
+                }
+         }
+    }
+                         ::ng-deep app-mensection {
+                             display: block;
+                             margin-left: 18vw;
+                             width: 80vw;
+                             min-height: 100vh;
+            
+                             .man-section {
+                                 margin-top: 10px !important;
+                                 width: 100% !important;
+            
+                                 .wrapper {
+                                     margin-top: 10px !important;
+                                     width: 100% !important;
+                                     align-items: center !important;
+            
+                                     .single-item {
+                                         margin-top: 10px !important;
+                                         width: 100% !important;
+            
+                                         app-product {
+                                             margin: 0px auto !important;
+            
+                                             .product-div {
+                                                 margin: 0 auto !important;
+                                             }
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         ::ng-deep app-jewelry {
+                             display: block;
+                             margin-left: 18vw;
+                             width: 80vw;
+                             min-height: 100vh;
+            
+                             .jewelery-section {
+                                 margin-top: 10px !important;
+                                 width: 100% !important;
+            
+                                 .wrapper {
+                                     margin-top: 10px !important;
+                                     width: 100% !important;
+                                     align-items: center !important;
+            
+                                     .single-item {
+                                         margin-top: 10px !important;
+                                         width: 100% !important;
+            
+                                         app-product {
+                                             margin: 0px auto !important;
+            
+                                             .product-div {
+                                                 margin: 0 auto !important;
+                                             }
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+}
+
+
+
+@media only screen and (max-width:720px){
+    header{
+        width: 25vw;
+        font-size: 10px!important;
+        .navigate-btns{
+  button{
+                width: 50vw;
+                font-size: 13px!important;
+                span{
+                  .mat-button-wrapper{
+                    width: 10px;
+                  }
+                }
+            }
+        }
+    }
+}

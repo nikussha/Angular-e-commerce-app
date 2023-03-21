@@ -1,0 +1,30 @@
+<div class="product-div">
+  <div class="img">
+    <img [src]="product.image" (click)="navigateto(product.id)" />
+    <p *ngIf="serv.addeditem == product.title" style="color: rgb(185, 52, 52)">
+      product added
+    </p>
+    <form>
+      <mat-form-field>
+        <input
+          style="height: 20px"
+          type="number"
+          matInput
+          [formControl]="countitems"
+          min="0"
+        />
+      </mat-form-field>
+    </form>
+    <button style="color: rgb(51, 76, 117)" mat-button (click)="addtocart()">
+      Add to cart
+    </button>
+  </div>
+  <div class="other-info">
+    <p style="border-bottom: 1px solid rgb(73, 71, 101); padding: 5px">
+      {{ product.category }}
+    </p>
+    <h4>{{ product.title }}</h4>
+    <p style="margin-top: 20px">Rating - {{ product.rating.rate }}</p>
+    <p style="font-size: 22px">${{ product.price }}</p>
+  </div>
+</div>

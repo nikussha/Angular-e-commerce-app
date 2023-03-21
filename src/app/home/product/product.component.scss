@@ -1,0 +1,63 @@
+
+.product-div{
+    width: 380px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    border-radius: 15px;
+    padding: 20px;
+    .img{
+        width: 70%;
+        img{
+            width: 100%;
+            height: 60%;
+            cursor: pointer;
+            border-radius: 10px;
+            padding: 2px;
+        }
+
+    }
+    .other-info{
+        width: 100%;
+        height: 100%;
+        margin-left: 25px;
+        color: rgb(38, 68, 92)
+    }
+}
+
+
+@media only screen and(max-width:720px) {
+   ::ng-deep app-product{
+        width: 30vw!important;
+        height: auto!important;
+    }
+    .product-div{
+        width: 50vw;
+        .img{
+            width: 40%;
+            height: 100%;
+            img{
+                width: 100%;
+            }
+            form{
+                .mat-form-field{
+                    width: 100%;
+                }
+            }
+           
+        }
+        .other-info{
+            width: 40%;
+            height: 100%;
+            p{
+                font-size: 12px!important;
+                h4{
+                    font-size: 16px!important;
+                }
+            }
+        }
+    }
+
+}

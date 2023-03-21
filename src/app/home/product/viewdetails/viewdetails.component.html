@@ -1,0 +1,19 @@
+<ng-container *ngIf="viewitem$ | async as data">
+  <section>
+    <div class="wrapper">
+      <img [src]="data.image" />
+      <div class="info">
+        <h1>{{ data.category }}</h1>
+        <h3>{{ data.title }}</h3>
+        <p>{{ data.description }}</p>
+        <p>Price:{{ data.price }}</p>
+        <p>Rating: {{ data.rating.rate }}</p>
+      </div>
+      <div id="navigate-back">
+        <button mat-button routerLink="">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+      </div>
+    </div>
+  </section>
+</ng-container>

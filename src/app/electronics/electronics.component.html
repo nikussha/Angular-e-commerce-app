@@ -1,0 +1,9 @@
+<section class="electronics-section">
+  <div class="wrapper">
+    <ng-container *ngIf="electronics | async as el">
+      <div class="single-item" *ngFor="let each of el">
+        <app-product [product]="each"></app-product>
+      </div>
+    </ng-container>
+  </div>
+</section>

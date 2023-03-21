@@ -1,0 +1,25 @@
+<div class="cart" *ngIf="serv.itemsincart; else emptycart">
+  <ng-container *ngIf="cartproducts$ | async as cartdata">
+    <div class="cart-product" *ngFor="let data of cartdata">
+      <div class="cart-img">
+        <img [src]="data.image" />
+      </div>
+      <div class="cart-product-info">
+        <div class="payment">
+          <p>Price$:{{ data.price | number : "1.1-2" }}</p>
+          <p>Amount:{{ data.amount }}</p>
+        </div>
+        <div class="delete-button">
+          <button (click)="deleteproduct(data.id)" mat-button>
+            <mat-icon> close</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+<ng-template #emptycart>
+  <div class="cart">
+    <h1 style="color: black">No product to show</h1>
+  </div>
+</ng-template>

@@ -1,0 +1,52 @@
+section{
+    width: 100vw;
+    min-height: 100vh;
+    margin-top: 10vw;
+    .wrapper{
+        width: 50vw;
+        height: 500px;
+        margin-left: 10%;
+        display: flex;
+        img{
+          width: 50%;
+          height: 100%;
+          padding: 15px;
+          border-radius: 10px;
+        }
+        .info{
+            width: 50%;
+            height: 100%;
+            margin-left: 15px;
+            overflow-y: scroll;
+            h1,p{
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+@media only screen and (max-width:1200px){
+    section{
+        margin: 18% auto;
+
+    }
+}
+
+@media only screen and (max-width:1060px){
+    section{
+        margin: 18% 20%;
+     .wrapper{
+        width: 80%;
+        img{
+            width: 30%;
+        }
+        .info{
+            width: 30%;
+        }
+     }
+    }
+}

@@ -1,0 +1,13 @@
+section{
+    width: 100vw;
+    min-height: 100vh;
+    margin-top: 15vh;
+    .wrapper{
+        width: 90%;
+        height: 100%;
+        margin:10px auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}

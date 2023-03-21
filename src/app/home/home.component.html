@@ -1,0 +1,11 @@
+<section class="home-page">
+  <div class="products">
+    <ng-container *ngIf="product | async as data">
+      <app-product
+        class="prod"
+        [product]="product"
+        *ngFor="let product of data"
+      ></app-product>
+    </ng-container>
+  </div>
+</section>
